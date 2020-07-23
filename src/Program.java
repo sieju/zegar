@@ -1,51 +1,55 @@
 import java.util.LinkedList;
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class Program extends Clock {
 
 
-    public Program(int hours, int minutes) {
-        super(hours, minutes);
+    public Program(int clockNumber, int hours, int minutes) {
+        super(clockNumber, hours, minutes);
     }
-
 
     public static void main(String[] args) {
 
-        Clock clock = new Clock(7, 30);
-        Clock clock1 = new Clock(9, 30);
-        Clock clock2 = new Clock(10, 50);
+        Clock clock = new Clock(1,7, 30);
+        Clock clock1 = new Clock(2,9, 30);
+        Clock clock2 = new Clock(3,23, 59);
+        
 
+    for(int i = 0; i < 3;i++){
 
+        out.println("##################################");
+        out.println("Zegary przed zmiana");
+        out.println(clock);
+        out.println(clock1);
+        out.println(clock2);
 
-    List Clock = new LinkedList<Clock>();
-        Clock.add(clock.toString());
-        Clock.add(clock1.toString());
-        Clock.add(clock2.toString());
+        clock.tick();
+        clock1.tick();
+        clock2.tick();
+        
+        
+        
+        out.println("\n");
+        out.println("zegary po zmianie");
+        out.println(clock.toString());
+        out.println(clock1.toString());
+        out.println(clock2.toString());
+    
+    
+        List<Clock> Clock = new LinkedList<Clock>();
+        Clock.add(clock);
+        Clock.add(clock1);
+        Clock.add(clock2);
 
-
-
-
-    for(int i = 0; i < 1;i++){
-        System.out.println("Zegary przed zmiana");
-        System.out.println(clock);
-        System.out.println(clock1);
-        System.out.println(clock2);
-
-        clock.increment();
-        clock1.increment();
-        clock2.increment();
-        System.out.println("\n");
-        System.out.println("zegary po zmianie");
-        System.out.println(clock.toString());
-        System.out.println(clock1.toString());
-        System.out.println(clock2.toString());
-
-        System.out.println("\n");
-        System.out.println("lista po zmianie");
-        System.out.println(clock);
-        System.out.println(clock1);
-        System.out.println(clock2);
+        out.println("\n");
+        out.println("lista po zmianie");
+        out.println(Clock);
+        out.println("###################################");
+        out.println("\n");
 
     }
+
 }
 }
