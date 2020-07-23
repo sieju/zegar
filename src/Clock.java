@@ -37,7 +37,7 @@ public class Clock {
         return "Zegar " +
                 "#" + clockNumber +
                 ", Godzina:" + hours +
-                ", Minuta:" + minutes;
+                ", Minuta:" + minutes + "\n";
     }
 }
 
