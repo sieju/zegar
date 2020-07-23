@@ -25,9 +25,9 @@ public class Program extends Clock {
         out.println(clock1);
         out.println(clock2);
 
-        clock.tick();
-        clock1.tick();
-        clock2.tick();
+        clock.tick(5);
+        clock1.tick(0);
+        clock2.tick(0);
         
         
         
