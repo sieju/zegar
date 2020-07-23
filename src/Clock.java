@@ -34,10 +34,7 @@ public class Clock {
 
     @Override
     public String toString() {
-        return "Zegar " +
-                "#" + clockNumber +
-                ", Godzina:" + hours +
-                ", Minuta:" + minutes + "\n";
+        return "Zegar " + "#" + clockNumber + ", Godzina:" + hours + ", Minuta:" + minutes;
     }
 }
 

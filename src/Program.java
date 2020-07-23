@@ -3,13 +3,16 @@ import java.util.List;
 
 import static java.lang.System.*;
 
+
+
 public class Program extends Clock {
-
-
+    
     public Program(int clockNumber, int hours, int minutes) {
         super(clockNumber, hours, minutes);
     }
-
+    
+    
+    
     public static void main(String[] args) {
 
         Clock clock = new Clock(1,7, 30);
@@ -38,10 +41,10 @@ public class Program extends Clock {
         out.println(clock2.toString());
     
     
-        List<Clock> Clock = new LinkedList<Clock>();
-        Clock.add(clock);
-        Clock.add(clock1);
-        Clock.add(clock2);
+        List Clock = new LinkedList<Clock>();
+        Clock.add(clock.toString());
+        Clock.add(clock1.toString());
+        Clock.add(clock2.toString());
 
         out.println("\n");
         out.println("lista po zmianie");
