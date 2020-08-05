@@ -10,6 +10,8 @@ public class Program extends Clock {
     }
     
     public static void main(String[] args) {
+        
+        int add = 15;
 
         Clock clock = new Clock(1,7, 30);
         Clock clock1 = new Clock(2,9, 30);
@@ -26,7 +28,7 @@ public class Program extends Clock {
             out.println("Zegar #" + c.getClockNumber() + " przed zmianą |"  + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
             c.tick();
             out.println("Zegar #" + + c.getClockNumber() + " po zmianie o 1 min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
-            c.addMin(15);
+            c.addMin(add);
             out.println("Zegar #" + + c.getClockNumber() + " po dodaniu X min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
     
         }
@@ -40,7 +42,7 @@ public class Program extends Clock {
             out.println("Zegar #" + c.getClockNumber() + " przed zmianą |"  + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
             //c.tick();
             //out.println("Zegar #" + + c.getClockNumber() + " po zmianie o 1 min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
-            c.addMin(15);
+            c.addMin(add);
             out.println("Zegar #" + + c.getClockNumber() + " po dodaniu X min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
         
         }
