@@ -1,7 +1,7 @@
-import java.time.LocalTime;
 import java.util.LinkedList;
 import java.util.List;
-import static java.lang.System.*;
+
+import static java.lang.System.out;
 
 public class Program extends Clock {
     
@@ -33,26 +33,5 @@ public class Program extends Clock {
             out.println("Zegar #" + + c.getClockNumber() + " po dodaniu X min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
     
         }
-    
-        out.println("\n");
-        out.println("##########################################################################################################################");
-        out.println("\n");
-    
-        for (Clock c: clocks) {
-        
-            out.println("Zegar #" + c.getClockNumber() + " przed zmianą |"  + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
-            //c.tick();
-            //out.println("Zegar #" + + c.getClockNumber() + " po zmianie o 1 min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
-            c.addMin(ADD);
-            out.println("Zegar #" + + c.getClockNumber() + " po dodaniu X min |" + " Godzina : "+ c.getHours()+ " Minuta: " + c.getMinutes());
-        
-        }
-    
-        LocalTime time = LocalTime.of(23,47,20);
-      time.plusMinutes(15);
-        out.println(time);
-        out.println(time.plusMinutes(15));
-        
-        //out.println("Zegary po zmianie o 1 min: " + clocks.toString());
    }
 }
