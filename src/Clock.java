@@ -36,25 +36,32 @@ public class Clock {
     public void tick(){
         
         minutes++;
-        if (hours  >= 24  && hours >=0) {
-            hours = 1;
-        }
-        
         if(minutes == 60) {
             hours++;
             minutes = 0;
         }
         
+        if (hours  >= 24) {
+            hours = 1;
+        }
+        
+        
+        
     }
     
-    void addMin(int add){
+    void addMin(int ADD){
+        minutes = minutes + ADD;
+        int minutesDifference = minutes % 60;
+           
         
-        int minutesDifference = add % 60;
-            minutes = minutes + add;
-    
+        if(minutes >= 60) {
+            minutes = minutesDifference;
+            hours++;
+        }
         
-        
-        if(minutes > 60) {
+        if (hours >= 24)
+        {
+            hours = 0;
             minutes = minutesDifference;
         }
         
